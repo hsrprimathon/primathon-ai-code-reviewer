@@ -37,6 +37,7 @@ jobs:
           DEFAULT_COMBINE_BRANCH_NAME: combine-prs-branch
           DEFAULT_IGNORE_LABEL: nocombine
         run: |
+          echo "Here in  combine PR"
           echo "BRANCH_PREFIX=${{ github.event.inputs.branchPrefix || env.DEFAULT_BRANCH_PREFIX }}" >> $GITHUB_ENV
           echo "MUST_BE_GREEN=${{ github.event.inputs.mustBeGreen || env.DEFAULT_MUST_BE_GREEN }}" >> $GITHUB_ENV
           echo "COMBINE_BRANCH_NAME=${{ github.event.inputs.combineBranchName || env.DEFAULT_COMBINE_BRANCH_NAME }}" >> $GITHUB_ENV
