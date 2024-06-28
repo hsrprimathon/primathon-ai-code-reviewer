@@ -12,6 +12,7 @@ import {codeReview} from './review'
 import {handleReviewComment} from './review-comment'
 
 async function run(): Promise<void> {
+  console.warn('I am here 1')
   const options: Options = new Options(
     getBooleanInput('debug'),
     getBooleanInput('disable_review'),
@@ -69,6 +70,7 @@ async function run(): Promise<void> {
   }
 
   try {
+    console.log('I am here 2')
     // check if the event is pull_request
     if (
       process.env.GITHUB_EVENT_NAME === 'pull_request' ||
